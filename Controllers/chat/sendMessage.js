@@ -1,4 +1,4 @@
-const Message = require("../../Schema/Message");
+const Message = require("../../Schema/message");
 const Chat = require('../../Schema/Chat')
 const User = require('../../Schema/User')
 
