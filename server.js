@@ -20,14 +20,20 @@ const path = require("path");
 dotenv.config();
 
 
-const io = require("socket.io")(server, {
+const { Server } = require("socket.io");
+
+app.use(cors({
+  origin: process.env.CLIENT_URL || "*",
+  credentials: true
+}));
+
+const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
-    // credentials: true,
-  },
+    origin: process.env.CLIENT_URL || "*",
+    methods: ["GET", "POST"]
+  }
 });
-
 
 
 // Bodyparser middleware

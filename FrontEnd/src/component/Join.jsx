@@ -176,7 +176,7 @@ const Join = () => {
 
   useEffect(() => {
     console.log(user1);
-    socket = io("http://localhost:4000/");
+    socket = io(process.env.REACT_APP_API_URL);
     socket.emit("setup", user1);
     socket.on("connected", () => Setsocketc(true));
     socket.on("typing", () => setIsTyping(true));

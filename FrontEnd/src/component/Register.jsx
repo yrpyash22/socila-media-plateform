@@ -52,7 +52,7 @@ const nav = useNavigate();
         
     };
     
-    const response = await fetch('http://localhost:4000/api/users/register', requestOptions)
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/register`, requestOptions)
     const Data = await response.json();
 
     if(!Data.error){

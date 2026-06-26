@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const dbUrl = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/socialmedia';
+const dbUrl = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/socialmedia';
 
 mongoose.connect(dbUrl)
   .then((conn) => {
