@@ -103,7 +103,12 @@ cd FrontEnd
 npm install
 ```
 
-4.Boots up the React start engine 
+4.Creat a new .env file inside the FrontEnd folder in this context is past
+```bash
+
+```
+
+5. Boots up the React start engine 
 ```bash
 npm start
 ```
