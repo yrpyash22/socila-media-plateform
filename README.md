@@ -19,14 +19,16 @@ Ensure your operating system contains the following execution runtimes:
 ---
 
 # Installation setup 
+
+---
 ### Project name Social Media App -> <https://github.com/yrpyash22/socila-media-plateform>
 
 ---
-## 1. Extract the file to be downloaded by this link 
+1. Extract the file to be downloaded by this link 
 Name :- socila-media-plateform
 
 ---
-## 2. Establishing the Environment Configuration Layer
+2. Establishing the Environment Configuration Layer
 1. Navigate directly into the root folder of your backend setup,
 - cd social-media-plateform
 2. initialize a secure environment parameters file named exactly `.env`, 
@@ -51,10 +53,12 @@ CLOUD_API_SECRET=your_api_secret
 account.
 2. Once logged in or signup 
 3. Obtain your Cloudinary credentials from the dashboard.
+
 4.Replace
 - your_cloud_name
 - your_api_key
 - your_api_secret 
+
 in your .env file with your actual keys.
 
 
@@ -76,8 +80,9 @@ npm start
 - Backend service is run: http://localhost:4000
 - Connected Success to LOCAL Database:127.0.0.1
 
+---
 
-### 5 Server for Frontend
+### 5. Server for Frontend
 - It process is show in README.md file of Frontend folder
 
 ---
