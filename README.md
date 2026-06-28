@@ -2,10 +2,6 @@
 
 Piqosocial is a feature-rich, high-performance social media networking application designed with a robust decoupling architecture. Built using the MERN ecosystem (MongoDB, Express.js, React.js, Node.js) and styled natively with Bootstrap 5, this application provides an end-to-end sandbox environment for seamless real-time text interactions, profile customizations, and localized media stream filtering.
 
----
-# Piqosocial - Full-Stack MERN Social Networking Platform
-
-Piqosocial is a feature-rich, high-performance social media networking application designed with a robust decoupling architecture. Built using the **MERN ecosystem** (MongoDB, Express.js, React.js, Node.js) and styled natively with **Bootstrap 5**, this application provides an end-to-end sandbox environment for seamless real-time text interactions, profile customizations, and localized media stream filtering.
 
 ---
 
