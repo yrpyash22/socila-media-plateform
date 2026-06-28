@@ -105,7 +105,7 @@ npm install
 
 4.Creat a new .env file inside the FrontEnd folder in this context is past
 ```bash
-
+REACT_APP_API_URL=http://localhost:3000
 ```
 
 5. Boots up the React start engine 
