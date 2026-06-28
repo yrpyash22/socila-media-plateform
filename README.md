@@ -9,26 +9,27 @@ Piqosocial is a feature-rich, high-performance social media networking applicati
 
 Follow these exact technical procedures to deploy, initialize, and execute the complete ecosystem entirely on your local machine:
 
-### 1. System Infrastructure Prerequisites
+1. System Infrastructure Prerequisites
 Ensure your operating system contains the following execution runtimes:
 * **Node.js:** `v16.x` or higher installed ➔ [Download Node.js](https://nodejs.org/)
 * **MongoDB Suite:** MongoDB Community Server daemon running locally along with MongoDB Compass GUI ➔ [Download MongoDB Suite](https://www.mongodb.com/try/download/community)
 
 
 ---
----
 
 # Installation setup 
 
 ---
-### Project name Social Media App -> <https://github.com/yrpyash22/socila-media-plateform>
+### Project name Social Media App ->
+ <https://github.com/yrpyash22/socila-media-plateform>
 
 ---
-1. Extract the file to be downloaded by this link 
+### 1. Extract the file to be downloaded by this link 
 Name :- socila-media-plateform
 
 ---
-2. Establishing the Environment Configuration Layer
+### 2. Establishing the Environment Configuration Layer
+
 1. Navigate directly into the root folder of your backend setup,
 - cd social-media-plateform
 2. initialize a secure environment parameters file named exactly `.env`, 
@@ -65,13 +66,13 @@ in your .env file with your actual keys.
 ---
 
 ### 4. Server-Side Dependencies Hook & Initialization
+
 1. Launch your command terminal mapped inside the backend project root folder and execute the sequential lifecycle commands: 
 - .../socila-media-plateform> 
 2. Installs all necessary backend packages (Express, Mongoose, JWT-Decode, etc.)
 ```bash
 npm install
 ```
-
 3. Boots up the Node.js server engine 
 ```bash
 npm start
@@ -81,7 +82,6 @@ npm start
 - Backend service is run: http://localhost:4000
 - Connected Success to LOCAL Database:127.0.0.1
 
----
 ---
 
 ### 5. Server for Frontend
@@ -109,8 +109,8 @@ npm start
 ```
 ===> http://localhost:3000
 
-```
 
+---
 ### 6. Server for Frontend
 Now you can run The application 
 http://localhost:3000
@@ -142,7 +142,6 @@ Social-Networking-Mern-main/
 ```
 
 
----
 ---
 
 ## 🗂️ Frontend Project Directory Structure
