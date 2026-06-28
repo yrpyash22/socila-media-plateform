@@ -54,7 +54,6 @@ CLOUD_API_SECRET=your_api_secret
 account.
 2. Once logged in or signup 
 3. Obtain your Cloudinary credentials from the dashboard.
-
 4.Replace
 - your_cloud_name
 - your_api_key
@@ -107,7 +106,6 @@ npm install
 ```bash
 REACT_APP_API_URL=http://localhost:3000
 ```
-
 5. Boots up the React start engine 
 ```bash
 npm start
