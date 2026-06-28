@@ -68,22 +68,54 @@ in your .env file with your actual keys.
 1. Launch your command terminal mapped inside the backend project root folder and execute the sequential lifecycle commands: 
 - .../socila-media-plateform> 
 2. Installs all necessary backend packages (Express, Mongoose, JWT-Decode, etc.)
-'''
+```bash
 npm install
-'''
+```
 
 3. Boots up the Node.js server engine 
-'''
+```bash
 npm start
-'''
+```
+
 --> Upon a clean atomic database handshake, your terminal logs will confirm: 
 - Backend service is run: http://localhost:4000
 - Connected Success to LOCAL Database:127.0.0.1
 
 ---
+---
 
 ### 5. Server for Frontend
-- It process is show in README.md file of Frontend folder
+
+1: Open a Dedicated Terminal
+Open a **NEW independent terminal instance** in your code editor. 
+
+> ⚠️ **Critical Note:** Do NOT close your previous terminal window where your Node.js Backend Server is actively running database handlers on port `4000`. Both servers must execute simultaneously.
+
+2: Navigate to FrontEnd Directory
+Route your newly opened bash instance into the frontend execution directory level:
+```bash
+cd FrontEnd
+-->  /FrontEnd> 
+```
+
+3.Installs all necessary frontend packages  
+```bash
+npm install
+```
+
+4.Boots up the React start engine 
+```bash
+npm start
+```
+===> http://localhost:3000
+
+```
+
+### 6. Server for Frontend
+Now you can run The application 
+http://localhost:3000
+open in Browser.
+
 
 ---
 ## 🗂️ Backend Project Directory Structure
@@ -107,5 +139,45 @@ Social-Networking-Mern-main/
 ├── ProcFile               # Production lifecycle entry points descriptor
 ├── README.md              # Master engineering deployment guide and system documentation
 └── server.js              # Central backend engine core and Express runtime launcher
+```
 
 
+---
+---
+
+## 🗂️ Frontend Project Directory Structure
+
+Here is the structural blueprint of the frontend repository. It showcases how the user interface layers, static assets, and core configuration manifests are organized:
+
+```text
+FrontEnd/
+├── node_modules/
+├── public/                # Static public assets matrix
+├── src/                   # Core development engine (Main React Workspace)
+├── package.json           # Frontend platform manifesto and dependency specifications
+└── package-lock.json      # Locked version registry tree for client dependencies
+
+
+# Sub files
+
+public/                # Static Public Assets & Styling Core
+│   ├── bootstrap/         # Localized Bootstrap asset engine
+│   ├── images/            # Static local application asset icons & logos
+│   ├── all.min.css        # FontAwesome compiled asset iconography styles
+│   ├── index.html         # Main DOM mounting template webpage (Application Core)
+│   ├── profile.css        # Layout constraints for user profile interfaces
+│   └── style.css          # Baseline global stylesheet rules
+
+
+├── src/                   # Core Development Engine (Main React Workspace)
+│   ├── api/               # Async endpoint integrations (e.g., api-post.js)
+│   ├── auth/              # JWT storage controls and token validation modules
+│   ├── component/         # UI Modular Viewports (HomePage.jsx, Posts.jsx, NavBar.jsx)
+│   ├── config/            # Managed app client ports and structural base parameters
+│   ├── Context/           # Global React Context states for user session tracking
+│   ├── images/            # Core system assets, badges, and interface graphics
+│   ├── Routing/           # Navigation pathways matrix and public/private page boundaries
+│   ├── utils/             # Helper tools, date formatters, and clean parameters
+│   ├── index.css          # Baseline atomic utility CSS definitions
+│   └── index.js           # Core runtime setup script where React mounts onto index.html
+```
