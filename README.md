@@ -14,8 +14,23 @@ Ensure your operating system contains the following execution runtimes:
 * **Node.js:** `v16.x` or higher installed ➔ [Download Node.js](https://nodejs.org/)
 * **MongoDB Suite:** MongoDB Community Server daemon running locally along with MongoDB Compass GUI ➔ [Download MongoDB Suite](https://www.mongodb.com/try/download/community)
 
-### 2. Establishing the Environment Configuration Layer
-Navigate directly into the root folder of your backend setup, initialize a secure environment parameters file named exactly `.env`, and populate it with the following key-value matrices:
+
+---
+---
+
+# Installation setup 
+### Project name Social Media App -> <https://github.com/yrpyash22/socila-media-plateform>
+
+---
+## 1. Extract the file to be downloaded by this link 
+Name :- socila-media-plateform
+
+---
+## 2. Establishing the Environment Configuration Layer
+1. Navigate directly into the root folder of your backend setup,
+- cd social-media-plateform
+2. initialize a secure environment parameters file named exactly `.env`, 
+3. populate it with the following key-value matrices:
 
 ```env
 # Server Configuration
@@ -29,25 +44,41 @@ CLOUD_NAME=your_cloud_name
 CLOUD_API_KEY=your_api_key
 CLOUD_API_SECRET=your_api_secret
 ```
+
+---
 ### 3💡 Cloudinary Setup Guide:
-Go to Cloudinary and sign up for a free account.
-Once logged in, obtain your Cloudinary credentials from the dashboard.
-Replace your_cloud_name, your_api_key, and your_api_secret in your .env file with your actual keys.
+1. Go to Cloudinary and sign up for a free
+account.
+2. Once logged in or signup 
+3. Obtain your Cloudinary credentials from the dashboard.
+4.Replace
+- your_cloud_name
+- your_api_key
+- your_api_secret 
+in your .env file with your actual keys.
+
 
 ---
 
 ### 4. Server-Side Dependencies Hook & Initialization
-Launch your command terminal mapped inside the backend project root folder and execute the sequential lifecycle commands: 
-
-# Installs all necessary backend packages (Express, Mongoose, JWT-Decode, etc.)
+1. Launch your command terminal mapped inside the backend project root folder and execute the sequential lifecycle commands: 
+- .../socila-media-plateform> 
+2. Installs all necessary backend packages (Express, Mongoose, JWT-Decode, etc.)
+'''
 npm install
+'''
 
-# Boots up the Node.js server engine 
+3. Boots up the Node.js server engine 
+'''
 npm start
---> Upon a clean atomic database handshake, your terminal logs will confirm: Connected Success to LOCAL Database: 127.0.0.1
+'''
+--> Upon a clean atomic database handshake, your terminal logs will confirm: 
+- Backend service is run: http://localhost:4000
+- Connected Success to LOCAL Database:127.0.0.1
 
 
-
+### 5 Server for Frontend
+- It process is show in README.md file of Frontend folder
 
 ---
 ## 🗂️ Backend Project Directory Structure
