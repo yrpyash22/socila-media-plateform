@@ -1,6 +1,3 @@
-
-
-
 const express = require("express")
 const db = require('./config/db')
 const app = express();
@@ -19,7 +16,6 @@ const server = http.createServer(app)
 const path = require("path");
 dotenv.config();
 
-
 const { Server } = require("socket.io");
 
 app.use(cors({
@@ -35,11 +31,6 @@ const io = new Server(server, {
   }
 });
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
@@ -49,11 +40,6 @@ app.use(
 
 app.use(bodyParser.json());
 
-<<<<<<< HEAD
-app.use(cors({ origin: true }));
-=======
-
->>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
 // Passport middleware
 app.use(passport.initialize());
 // Passport config
@@ -98,25 +84,9 @@ io.on("connection", (socket) => {
 })
 // --------------------------deployment------------------------------
 
-<<<<<<< HEAD
-const __dirname1 = path.resolve();
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname1, "/FrontEnd/build")));
-
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname1, "FrontEnd", "build", "index.html"))
-  );
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running..");
-  });
-}
-=======
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
->>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
 
 // --------------------------deployment------------------------------
 
