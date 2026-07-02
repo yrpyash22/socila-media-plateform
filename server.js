@@ -84,9 +84,9 @@ require('./config/password')(passport);
 
 // Routes
 app.use("/api/users", users);
-app.use("/api/post/", posts);
-app.use("/api/chat/", chat);
-app.use("/api/message/", message);
+app.use("/api/post", posts);
+app.use("/api/chat", chat);
+app.use("/api/message", message);
 app.use("/api/upload", uploadRoute);
 
 // Socket.io Logic
