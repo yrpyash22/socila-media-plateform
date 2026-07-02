@@ -8,7 +8,6 @@ import {toast} from 'react-toastify';
 import PulseLoader from "react-spinners/PulseLoader";
 import BarLoader from "react-spinners/PulseLoader";
 import axios from 'axios';
-import { useReducer } from 'react';
 
 const Post = (props1) => {
 
