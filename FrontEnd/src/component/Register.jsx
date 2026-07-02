@@ -49,14 +49,10 @@ const nav = useNavigate();
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
-        
+
     };
-    
-<<<<<<< HEAD
+
     const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/register`, requestOptions)
-=======
-    const response = await fetch('http://localhost:4000/api/users/register', requestOptions)
->>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
     const Data = await response.json();
 
     if(!Data.error){
@@ -64,13 +60,13 @@ const nav = useNavigate();
     setLoading(false)
     nav('/login')
     }
-    else 
+    else
     {
     toast.warning(Data.error,{position: toast.POSITION.TOP_LEFT,autoClose:1000})
     setLoading(false)
     }
-    
-    
+
+
   }
 
   return (

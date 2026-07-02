@@ -36,24 +36,20 @@ const handleClick = async (event) => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
-        
+
     };
     try{
-<<<<<<< HEAD
     const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/login`, requestOptions);
-=======
-    const response = await fetch('http://localhost:4000/api/users/login', requestOptions);
->>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
     const Data = await response.json();
     console.log(Data);
-    
+
     if(Data.success){
     localStorage.setItem("userInfo1", JSON.stringify(Data));
     toast.success('Successful Login',{position: toast.POSITION.TOP_LEFT,autoClose:1000})
     setLoading(false)
     nav('/s')
     }
-  else 
+  else
   {
     throw Data
   }
@@ -63,7 +59,7 @@ const handleClick = async (event) => {
       setLoading(false)
 
   }
-    
+
   }
 function handleChange(event)
   {
@@ -107,7 +103,7 @@ function handleChange(event)
     </div>
 
     <div class="col-sm-4">
-      
+
     </div>
 
   </div>

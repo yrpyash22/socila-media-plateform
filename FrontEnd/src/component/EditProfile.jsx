@@ -40,24 +40,16 @@ const EditProfile = () => {
     })
   }, [])
 
-  // Naya Image Handler jo tumhare Backend Server se baatein karega!
   const ImageHander = (pics) => {
     setPicLoading1(true)
-    
+
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
-      // 'image' field name match hona chahiye backend ke upload.single("image") se
-      data.append("image", pics); 
+      data.append("image", pics);
 
-      // Tumhare local Node.js server ka upload route
-<<<<<<< HEAD
       fetch(`${process.env.REACT_APP_API_URL}/api/upload`, {
-=======
-      fetch("http://localhost:4000/api/upload", {
->>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
         method: "POST",
         body: data,
-        // Yahan Headers me Content-Type lagane ki galti mat karna, browser boundary khud sambhalega
       })
         .then((res) => {
           if (!res.ok) {
@@ -66,7 +58,6 @@ const EditProfile = () => {
           return res.json();
         })
         .then((data) => {
-          // Backend se response me milne waali url ko state me set karo
           setValues({ ...values, image: data.url });
           console.log("Uploaded Image URL:", data.url);
           setPicLoading1(false);
@@ -99,8 +90,6 @@ const EditProfile = () => {
   return (
     <div>
       <NavBar />
-
-      {/*-------------------------------------------------------------- body -------------------------------------------------------------*/}
 
       <div className="d-flex flex-column py-5 align-items-center mt-5">
         <div className="d-flex flex-column align-items-center flex-lg-row align-items-lg-start m-auto">

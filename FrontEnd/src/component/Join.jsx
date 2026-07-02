@@ -2,7 +2,7 @@ import React from "react";
 import Post from "./Post";
 import Posts from "./Posts";
 import auth from "./../auth/auth-help";
-import jwt1 from "jwt-decode"; // import dependency
+import jwt1 from "jwt-decode";
 import { getSender } from "../config/chatLogic";
 import Avatar from "@mui/material/Avatar";
 import { useRef } from "react";
@@ -85,7 +85,6 @@ const Join = () => {
     selectedChatCompare = chat;
     fetchMessages();
     setNotification(notification.filter((e) => e !== notiy));
-    // Get(chat)
   };
   function padTo2Digits(num) {
     return String(num).padStart(2, "0");
@@ -176,11 +175,7 @@ const Join = () => {
 
   useEffect(() => {
     console.log(user1);
-<<<<<<< HEAD
     socket = io(process.env.REACT_APP_API_URL);
-=======
-    socket = io("http://localhost:4000/");
->>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
     socket.emit("setup", user1);
     socket.on("connected", () => Setsocketc(true));
     socket.on("typing", () => setIsTyping(true));
@@ -203,7 +198,7 @@ const Join = () => {
   useEffect(() => {
     socket.on("message recieved", (newMessageRecieved) => {
       if (
-        !selectedChatCompare || // if chat is not selected or doesn't match current chat
+        !selectedChatCompare ||
         selectedChatCompare._id !== newMessageRecieved.chat._id
       ) {
         if (!notification.includes(newMessageRecieved)) {
@@ -313,9 +308,8 @@ const Join = () => {
                     }}
                     onClose={() => {
                       setOpen(false);
-                      //setSearchResult([])
                     }}
-                    onChange={(event, value) => Get(value)} // prints the selected value
+                    onChange={(event, value) => Get(value)}
                     autoHighlight
                     getOptionLabel={(option) => option.name}
                     renderOption={(props, option) => (
@@ -330,7 +324,6 @@ const Join = () => {
                           width="30"
                           height="30"
                           src={option.image}
-                          //srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
                           alt=""
                         />
                         {option.name}
@@ -471,7 +464,6 @@ const Join = () => {
                           {new Date(
                             chat.latestMessage.createdAt
                           ).toLocaleTimeString("en-US", {
-                            // en-US can be set to 'default' to use user's browser settings
                             hour: "2-digit",
                             minute: "2-digit",
                           })}
