@@ -73,7 +73,11 @@ const Post = (props1) => {
       data.append("image", pics); 
 
       // Tumhare local Node.js server ka upload route
+<<<<<<< HEAD
       fetch(`${process.env.REACT_APP_API_URL}/api/upload`, {
+=======
+      fetch("http://localhost:4000/api/upload", {
+>>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
         method: "POST",
         body: data,
         // Headers me Content-Type mat lagana, browser boundary khud sambhalega

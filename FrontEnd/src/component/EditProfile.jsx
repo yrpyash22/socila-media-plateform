@@ -50,7 +50,11 @@ const EditProfile = () => {
       data.append("image", pics); 
 
       // Tumhare local Node.js server ka upload route
+<<<<<<< HEAD
       fetch(`${process.env.REACT_APP_API_URL}/api/upload`, {
+=======
+      fetch("http://localhost:4000/api/upload", {
+>>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
         method: "POST",
         body: data,
         // Yahan Headers me Content-Type lagane ki galti mat karna, browser boundary khud sambhalega

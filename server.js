@@ -36,6 +36,10 @@ const io = new Server(server, {
 });
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
@@ -45,7 +49,11 @@ app.use(
 
 app.use(bodyParser.json());
 
+<<<<<<< HEAD
 app.use(cors({ origin: true }));
+=======
+
+>>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
 // Passport middleware
 app.use(passport.initialize());
 // Passport config
@@ -90,6 +98,7 @@ io.on("connection", (socket) => {
 })
 // --------------------------deployment------------------------------
 
+<<<<<<< HEAD
 const __dirname1 = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
@@ -103,6 +112,11 @@ if (process.env.NODE_ENV === "production") {
     res.send("API is running..");
   });
 }
+=======
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+>>>>>>> 2aa250d5bb470c71f3a4a3ca912227c004eea4d7
 
 // --------------------------deployment------------------------------
 
