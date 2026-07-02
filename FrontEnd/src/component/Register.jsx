@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import PulseLoader from "react-spinners/PulseLoader";
 import { Link } from 'react-router-dom';
 
+// Backup ke sath BASE_URL setup kar diya
+const BASE_URL = process.env.REACT_APP_API_URL || "https://socila-media-plateform.onrender.com";
+
 const Register = ({history}) => {
 let [loading, setLoading] = useState(false);
 let [color, setColor] = useState("#000000");
@@ -52,7 +55,8 @@ const nav = useNavigate();
 
     };
 
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/register`, requestOptions)
+    // Yahan BASE_URL use kiya hai
+    const response = await fetch(`${BASE_URL}/api/users/register`, requestOptions)
     const Data = await response.json();
 
     if(!Data.error){

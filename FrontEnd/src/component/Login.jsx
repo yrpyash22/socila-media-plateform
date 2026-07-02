@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 import PulseLoader from "react-spinners/PulseLoader";
 
+// Backup ke sath BASE_URL setup kar diya
+const BASE_URL = process.env.REACT_APP_API_URL || "https://socila-media-plateform.onrender.com";
 
 const Login = ({history}) => {
   let [loading, setLoading] = useState(false);
@@ -39,7 +41,8 @@ const handleClick = async (event) => {
 
     };
     try{
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/login`, requestOptions);
+    // Yahan BASE_URL use kiya hai
+    const response = await fetch(`${BASE_URL}/api/users/login`, requestOptions);
     const Data = await response.json();
     console.log(Data);
 
