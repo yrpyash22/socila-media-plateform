@@ -181,3 +181,62 @@ public/                # Static Public Assets & Styling Core
 │   ├── index.css          # Baseline atomic utility CSS definitions
 │   └── index.js           # Core runtime setup script where React mounts onto index.html
 ```
+---
+# 🌐 Deployment
+
+The **Piqosocial Social Networking Platform** is deployed using a separate frontend and backend architecture:
+
+* **Frontend:** Deployed on Vercel
+* **Backend:** Deployed on Render
+* **Database:** MongoDB
+* **Media Storage:** Cloudinary
+
+### 🚀 Live Application
+
+The production application can be accessed here:
+
+**Live Website:**
+https://socila-media-plateform-sigma.vercel.app/
+
+### 🏗️ Deployment Architecture
+
+```text
+                    Piqosocial
+                        │
+                        │
+              ┌─────────┴─────────┐
+              │                   │
+          Frontend             Backend
+           Vercel               Render
+              │                   │
+              │      API Calls    │
+              └──────────────────►│
+                                  │
+                         ┌────────┴────────┐
+                         │                 │
+                      MongoDB          Cloudinary
+                    Database          Media Storage
+```
+
+### 📌 Production Flow
+
+```text
+User
+ │
+ ▼
+Vercel
+React Frontend
+ │
+ │ HTTPS API Requests
+ ▼
+Render
+Express + Node.js Backend
+ │
+ ├──────────────► MongoDB
+ │
+ └──────────────► Cloudinary
+```
+
+The frontend communicates with the deployed backend through API requests, while MongoDB handles persistent application data and Cloudinary handles uploaded media.
+
+> **Live Demo:** [Open Piqosocial](https://socila-media-plateform-sigma.vercel.app/)
